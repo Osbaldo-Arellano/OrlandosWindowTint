@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="../assets/css/divider-text-middle.css">
+    <link rel="stylesheet" href="../assets/css/Footer-Dark-Multi-Column-icons.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/Icon-Centered-Between-Lines.css">
+    <link rel="stylesheet" href="../assets/css/vanilla-zoom.min.css">
+
+    <style>
+        .navbar-shrink {
+          height: 100px !important;           /* Smaller navbar height */
+          transition: height 0.9s ease;      /* Smooth transition */
+        }
+    
+        .navbar-shrink img {
+          max-height: 60px;                 /* Shrink the logo image */
+          transition: max-height 0.9s ease; /* Smooth transition for the logo */
+        }
+
+        .before-after-container {
+        position: relative;
+        max-width: 800px;       /* Adjust as needed (or set to 100% for full-width) */
+        margin: 0 auto;
+        overflow: hidden;
+        }
+
+        /* Common styles for both images */
+        .before-after-container .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        }
+
+        /* The "After" image sits on top but is clipped to show half by default */
+        .before-after-container .after-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* Clip the right half out initially (inset => top, right, bottom, left) */
+        clip-path: inset(0 50% 0 0);
+        -webkit-clip-path: inset(0 50% 0 0);
+        }
+
+        /* The slider (range input) that the user drags */
+        .before-after-container .slider-range {
+        position: absolute;
+        bottom: 20px;           /* Position near bottom; adjust as you like */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        z-index: 10;
+        cursor: pointer;
+        }
+
+
+      </style>
+</head>
+
+<body>
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top bg-body clean-navbar" 
+    style="opacity: 0.88; transition: opacity 0.3s ease;"
+    onmouseover="this.style.opacity='1'" 
+    onmouseout="this.style.opacity='0.88'">
+        <div class="container">
+            <a class="navbar-brand logo" href="#"></a>
+            <img src="../assets/img/tech/logo-removebg-preview.png" width="253" height="151">
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html" style="font-size: 18px;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../about-us.html" style="font-size: 18px;">About US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../gallery.html" style="font-size: 18px;">Gallery</a></li>
+                </ul>
+            </div>
+            <strong class="d-none d-lg-block">
+                <br>
+                <span style="font-weight: normal !important; color: rgb(255, 255, 255);">Mount Vernon, WA</span>
+                <br><br>
+            </strong>
+            <strong class="d-none d-lg-block">&nbsp; (360) 941-8200</strong>
+        </div>
+    </nav>
+
+    
+    <main class="page">
+        <section class="clean-block clean-hero" style="background-image:url('../assets/img/tech/image5.jpg'); color:rgba(0, 0, 0, 0.5);">
+            <div class="text">
+                <!-- Desktop heading: hidden on screens smaller than md -->
+                <h1 class="d-none d-md-block" style="color: var(--bs-light);">
+                    <strong>Seattle’s Premier Window Tinting Service with 15+ Years of Experience</strong>
+                </h1>
+        
+                <!-- Mobile heading: shown only on screens smaller than md -->
+                <h1 class="d-block d-md-none" style="color: var(--bs-light);margin-top: 50%;">
+                    <strong>Seattle’s Premier Window Tinting Service with 15+ Years of Experience</strong>
+                </h1>
+        
+                <p><br>
+                    <button class="btn btn-outline-light btn-lg"
+                            type="button"
+                            style="margin: 25px; filter: blur(0px); backdrop-filter: blur(17px); -webkit-backdrop-filter: blur(17px);"
+                            onclick="location.href='#contact-section'">
+                        Get A Free Estimate
+                    </button>
+        
+                    <button class="btn btn-outline-light btn-lg"
+                            type="button"
+                            style="backdrop-filter: blur(17px); -webkit-backdrop-filter: blur(17px);"
+                            onclick="location.href='#contact-section'">
+                        Contact Us
+                    </button><br><br>
+                </p>
+            </div>
+        </section>
+        
+        <section class="clean-block features">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Our Expert Services</h2>
+                    <p>We specialize in premium window tinting, custom car wraps, paint protection film (PPF), and headlight/tail light tinting.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 feature-box"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="icon">
+                            <rect fill="none" height="24" width="24"></rect>
+                            <path d="M11,4V2c0-0.55,0.45-1,1-1s1,0.45,1,1v2c0,0.55-0.45,1-1,1S11,4.55,11,4z M18.36,7.05l1.41-1.42c0.39-0.39,0.39-1.02,0-1.41 c-0.39-0.39-1.02-0.39-1.41,0l-1.41,1.42c-0.39,0.39-0.39,1.02,0,1.41C17.34,7.44,17.97,7.44,18.36,7.05z M22,11h-2 c-0.55,0-1,0.45-1,1s0.45,1,1,1h2c0.55,0,1-0.45,1-1S22.55,11,22,11z M12,19c-0.55,0-1,0.45-1,1v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2 C13,19.45,12.55,19,12,19z M5.64,7.05L4.22,5.64c-0.39-0.39-0.39-1.03,0-1.41s1.03-0.39,1.41,0l1.41,1.41 c0.39,0.39,0.39,1.03,0,1.41S6.02,7.44,5.64,7.05z M16.95,16.95c-0.39,0.39-0.39,1.03,0,1.41l1.41,1.41c0.39,0.39,1.03,0.39,1.41,0 c0.39-0.39,0.39-1.03,0-1.41l-1.41-1.41C17.98,16.56,17.34,16.56,16.95,16.95z M2,13h2c0.55,0,1-0.45,1-1s-0.45-1-1-1H2 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M5.64,19.78l1.41-1.41c0.39-0.39,0.39-1.03,0-1.41s-1.03-0.39-1.41,0l-1.41,1.41 c-0.39,0.39-0.39,1.03,0,1.41C4.61,20.17,5.25,20.17,5.64,19.78z M12,6c-3.31,0-6,2.69-6,6s2.69,6,6,6s6-2.69,6-6S15.31,6,12,6z"></path>
+                        </svg>
+                        <h4>Ceramic Window Tinting</h4>
+                        <p class="fas fa-check">&nbsp;Reduce glare, heat, and UV exposure</p>
+                        <p class="fas fa-check">&nbsp;Improve privacy and security</p>
+                        <p class="fas fa-check">&nbsp;High-quality film with a sleek finish</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-car-suv icon">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M5 17a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                            <path d="M16 17a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                            <path d="M5 9l2 -4h7.438a2 2 0 0 1 1.94 1.515l.622 2.485h3a2 2 0 0 1 2 2v3"></path>
+                            <path d="M10 9v-4"></path>
+                            <path d="M2 7v4"></path>
+                            <path d="M22.001 14.001a4.992 4.992 0 0 0 -4.001 -2.001a4.992 4.992 0 0 0 -4 2h-3a4.998 4.998 0 0 0 -8.003 .003"></path>
+                            <path d="M5 12v-3h13"></path>
+                        </svg>
+                        <h4><strong>Custom Car Wraps</strong></h4>
+                        <p class="fas fa-check">&nbsp;Full and partial vehicle wraps</p>
+                        <p class="fas fa-check">&nbsp;Matte, gloss, and textured finishes</p>
+                        <p class="fas fa-check">&nbsp;Personalized designs and branding</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><i class="icon-shield icon"></i>
+                        <h4>Paint Protection Film (PPF)</h4>
+                        <p class="fas fa-check">&nbsp;Protect your car’s paint from scratches and chips</p>
+                        <p class="fas fa-check">&nbsp;Self-healing technology for long-lasting durability</p>
+                        <p class="fas fa-check">&nbsp;Invisible protection with a flawless finish</p>
+                    </div>
+                    <div class="col-md-5 feature-box"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="icon">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"></path>
+                        </svg>
+                        <h4>Headlight &amp; Taillight Tinting</h4>
+                        <p class="fas fa-check">&nbsp;Sleek, stylish smoked or color-tinted look</p>
+                        <p class="fas fa-check">&nbsp;Added protection against wear and tear</p>
+                        <p class="fas fa-check">&nbsp;DOT-approved film options available</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clean-block slider dark">
+            <div class="container">
+              <div class="block-heading">
+                <h2 class="text-info">See the Transformation</h2>
+                <p>
+                  View the <strong>before &amp; after</strong> of our window tinting and car wrapping
+                  services. Our work <strong>improves your car’s look</strong>, <strong>reduces
+                  glare</strong>, and <strong>provides UV protection</strong>—all while giving it a
+                  sleek look!
+                </p>
+              </div>
+          
+              <!-- BEFORE/AFTER SLIDER -->
+              <div class="before-after-container">
+                <!-- "Before" image (behind) -->
+                <img src="../assets/img/scenery/image3.jpg" alt="Before" class="image before-img">
+          
+                <!-- "After" image (on top, clipped by default) -->
+                <img src="../assets/img/scenery/image2.jpg" alt="After" class="image after-img">
+          
+                <!-- Range Slider Control -->
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider-range"
+                  id="sliderControl"
+                >
+              </div>
+            </div>
+          </section>
+          
+        
+        <section  id="contact-section" class="clean-block">
+            <section class="position-relative py-4 py-xl-5">
+                <div class="container position-relative">
+                    <div class="row">
+                        <div class="col"><iframe allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.8683977664887!2d-122.2560599231453!3d48.45905452872555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54856cc1caf6b079%3A0xd2bc253b2cf311a4!2s22734%20Mud%20Lake%20Rd%2C%20Mount%20Vernon%2C%20WA%2098273!5e0!3m2!1sen!2sus!4v1740095564738!5m2!1sen!2sus" width="100%" height="100%"></iframe></div>
+                        <div class="col-md-6 col-xl-4">
+                            <div>
+                                <form class="p-3 p-xl-4" id="contact-form">
+                                    <h4>Get in Touch with Us</h4>
+                                    <p class="text-muted">Have questions? Want a free quote? We're here to help!</p>
+                                  
+                                    <div class="mb-3">
+                                      <label class="form-label" for="name">Name</label>
+                                      <input class="form-control" type="text" id="name" name="name" required>
+                                    </div>
+                                  
+                                    <div class="mb-3">
+                                      <label class="form-label" for="email">Email</label>
+                                      <input class="form-control" type="email" id="email" name="email" required>
+                                    </div>
+                                  
+                                    <div class="mb-3">
+                                      <label class="form-label" for="message">Message</label>
+                                      <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                                    </div>
+                                  
+                                    <!-- Submit Button with an ID -->
+                                    <div class="mb-3">
+                                      <button class="btn btn-primary" type="submit" id="submit-button">Send</button>
+                                    </div>
+                                  
+                                    <!-- A hidden loading indicator (spinner) -->
+                                    <div id="loading-indicator" style="display: none;">
+                                      <strong>Sending...</strong>
+                                      <!-- Or any other spinner HTML -->
+                                    </div>
+                                  </form>
+                                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="d-flex flex-column justify-content-center align-items-start h-100"></div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div style="text-align:center;">
+            <h2 class="divider-style"><span><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" style="color: var(--bs-danger);">
+                        <g>
+                            <rect fill="none" height="24" width="24"></rect>
+                        </g>
+                        <g>
+                            <path d="M16.22,12c0.68,0,1.22-0.54,1.22-1.22c0-0.67-0.54-1.22-1.22-1.22S15,10.11,15,10.78C15,11.46,15.55,12,16.22,12z M6.56,10.78c0,0.67,0.54,1.22,1.22,1.22S9,11.46,9,10.78c0-0.67-0.54-1.22-1.22-1.22S6.56,10.11,6.56,10.78z M7.61,4L6.28,8h11.43 l-1.33-4H7.61z M16.28,3c0,0,0.54,0.01,0.92,0.54c0.02,0.02,0.03,0.04,0.05,0.07c0.07,0.11,0.14,0.24,0.19,0.4 C17.66,4.66,19,8.69,19,8.69v6.5c0,0.45-0.35,0.81-0.78,0.81h-0.44C17.35,16,17,15.64,17,15.19V14H7v1.19C7,15.64,6.65,16,6.22,16 H5.78C5.35,16,5,15.64,5,15.19v-6.5c0,0,1.34-4.02,1.55-4.69c0.05-0.16,0.12-0.28,0.19-0.4C6.77,3.58,6.78,3.56,6.8,3.54 C7.18,3.01,7.72,3,7.72,3H16.28z M4,17.01h16V19h-7v3h-2v-3H4V17.01z"></path>
+                        </g>
+                    </svg></span></h2>
+        </div>
+        <footer class="text-light bg-dark pt-5 pb-4">
+            <div class="container text-md-left">
+                <div class="row text-md-left">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold">Superior Tint and Custom</h5>
+                        <p><br>Seattle’s Premier Window Tinting Service<br><br><br></p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold">Products</h5>
+                        <p><a class="text-light" style="text-decoration:none;">Window Tint</a></p>
+                        <p><a class="text-light" style="text-decoration:none;">Custom Car Wraps</a></p>
+                        <p><a class="text-light" style="text-decoration:none;">Paint Protection Film</a></p>
+                        <p><a class="text-light" style="text-decoration:none;">Headlight &amp; Taillight Tint</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+                        <p><i class="fas fa-home mr-3"></i>&nbsp;22734 Mud Lake Rd, Mount Vernon, Washington</p>
+                        <p><i class="fas fa-envelope mr-3"></i><span style="background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));">&nbsp;superiortintandcustoms@gmail.com</span></p>
+                        <p><i class="fas fa-phone mr-3"></i><span style="background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));">&nbsp;(360) 941-8200</span></p>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <div class="row align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="text-md-left">© 2024 Superior Tint and Custom. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-5 col-lg-4">
+                        <div class="text-md-right">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-light" style="font-size:23px;"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-light" style="font-size:23px;"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                                        </svg></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-light" style="font-size:23px;"><i class="fab fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-light" style="font-size:23px;"><i class="fa fa-phone-square"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </footer>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/baguetteBox.min.js"></script>
+    <script src="../assets/js/vanilla-zoom.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/Lightbox-Gallery-No-Gutters-Lightbox-Gallery.js"></script>
+
+    <!-- Handle navbar shrink on scroll -->
+    <script>
+        window.addEventListener('scroll', function() {
+          const navbar = document.getElementById('mainNav');
+          // Change 50 to whatever scroll position (in px) you want before it shrinks
+          if (window.scrollY > 50) {
+            navbar.classList.add('navbar-shrink');
+          } else {
+            navbar.classList.remove('navbar-shrink');
+          }
+        });
+    </script>
+
+    <!-- Handle slider before and after images -->
+    <script>
+        const slider = document.getElementById('sliderControl');
+        const afterImg = document.querySelector('.after-img');
+    
+        // Update the clip-path of the "After" image based on the slider value
+        slider.addEventListener('input', function() {
+        const value = this.value; // Ranges 0–100
+        // Clip from the right side by (100 - value)%
+        afterImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+        afterImg.style.webkitClipPath = `inset(0 ${100 - value}% 0 0)`;
+        });
+    </script>
+  
+    <!-- Script that handles the contact form -->
+    <script>
+        const form = document.getElementById("contact-form");
+        const loadingIndicator = document.getElementById("loading-indicator");
+        const submitButton = document.getElementById("submit-button");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            // Show the spinner and disable the button
+            loadingIndicator.style.display = "block";
+            submitButton.disabled = true;
+
+            // Get form data
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+
+            try {
+                // Send the form data to your backend
+                const response = await fetch("/.netlify/functions/send-mail", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert(result.message);
+                    form.reset(); // Reset form fields after successful submission
+                } else {
+                    alert("Failed to send the message: " + result.message);
+                }
+            } catch (error) {
+                alert("Failed to send the message. Please try again!");
+            } finally {
+                // Hide the spinner and re-enable the button
+                loadingIndicator.style.display = "none";
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+
+      
+</body>
+
+</html>

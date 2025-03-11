@@ -1,0 +1,17 @@
+[build]
+  publish = "public"         # Where to serve your static site
+  functions = "netlify/functions"    # Where Netlify will look for serverless functions
+
+[dev]
+  port = 8888                # Optional: default is 8888
+
+[[redirects]]
+  from = "/*"
+  to = "/public/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+  Cache-Control = "public, max-age=0, must-revalidate"
+
