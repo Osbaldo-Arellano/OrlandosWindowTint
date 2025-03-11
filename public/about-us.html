@@ -37,16 +37,17 @@
     onmouseover="this.style.opacity='1'" 
     onmouseout="this.style.opacity='0.88'">
         <div class="container">
-            <a class="navbar-brand logo" href="#"></a>
-            <img src="../assets/img/tech/logo-removebg-preview.png" width="253" height="151">
+            <a class="navbar-brand logo" href="/index.html">
+                <img src="../assets/img/tech/logo-removebg-preview.png" width="253" height="151" alt="Home">
+            </a> 
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
                 <span class="visually-hidden">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="/index.html" style="font-size: 18px;">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about-us.html" style="font-size: 18px;">About US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html" style="font-size: 18px;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/about-us.html" style="font-size: 18px;">About US</a></li>
                     <li class="nav-item"><a class="nav-link" href="/gallery.html" style="font-size: 18px;">Gallery</a></li>
                 </ul>
             </div>
@@ -143,17 +144,33 @@
     <script src="../assets/js/theme.js"></script>
     <script src="../assets/js/Lightbox-Gallery-No-Gutters-Lightbox-Gallery.js"></script>
 
+    <!-- Handle navbar shrink on scroll -->
     <script>
+        const navbar = document.getElementById('mainNav');
+        const navbarCollapse = document.getElementById('navcol-1');
+    
+        // Shrink on scroll (already in your code)
         window.addEventListener('scroll', function() {
-          const navbar = document.getElementById('mainNav');
-          // Change 50 to whatever scroll position (in px) you want before it shrinks
-          if (window.scrollY > 50) {
-            navbar.classList.add('navbar-shrink');
-          } else {
-            navbar.classList.remove('navbar-shrink');
-          }
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-shrink');
+            } else {
+                navbar.classList.remove('navbar-shrink');
+            }
         });
-      </script>
+    
+        // LISTEN FOR BOOTSTRAP COLLAPSE EVENTS:
+        navbarCollapse.addEventListener('show.bs.collapse', function() {
+            // When mobile menu is opened, remove shrink so it’s full height
+            navbar.classList.remove('navbar-shrink');
+        });
+    
+        navbarCollapse.addEventListener('hide.bs.collapse', function() {
+            // When mobile menu closes, shrink again if scrolled past 50
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-shrink');
+            }
+        });
+    </script>
 </body>
 
 </html>
